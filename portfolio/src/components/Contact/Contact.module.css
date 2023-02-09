@@ -1,0 +1,6 @@
+.link{
+    text-decoration: none;
+    color: dodgerblue;
+    display: flex;
+    align-items: center;
+}
