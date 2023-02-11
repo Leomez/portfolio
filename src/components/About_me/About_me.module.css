@@ -1,0 +1,32 @@
+.skills_title {
+    margin-top: 3rem;
+    width: fit-content;
+    margin: 0;
+}
+
+.arrowIcon {
+    margin: 0;
+    transition: 0.4s;
+}
+
+
+.skills_close .arrowIcon {
+    color: black;
+}
+
+.skills_open .arrowIcon {
+    transform: rotate(90deg);
+}
+
+.skill_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.skills_close .skills_list {
+    height: 0;
+    overflow: hidden;
+}
+

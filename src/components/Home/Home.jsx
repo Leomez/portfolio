@@ -38,7 +38,7 @@ export default function Home() {
                 {t('presentacionP2_1')} <span className={s.link}>{t('presentacionP2_2')}</span> {t('presentacionP2_3')} <Link to={"/aboutMe"}><span className={s.link}>{t('presentacionP2_4')}</span></Link>
                 </Typography>
             </Box>
-            <Box sx={{width: '100%', marginTop: mediaQuery('3rem', '4rem')}}>                
+            <Box id="anchor-contact" sx={{width: '100%', marginTop: mediaQuery('3rem', '4rem')}}>                
                 <Contact />
             </Box>
             {/* <Box sx={{width: '100%', border: '1px solid red', display: mediaQuery('none', 'flex')}}>

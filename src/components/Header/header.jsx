@@ -1,11 +1,13 @@
 // import * as React from 'react';
-import {React, useState} from 'react';
+import { React, useState } from 'react';
 import s from "./header.module.css";
 import "../Traductor/i18n";
+import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next";
-import {Select, MenuItem, Button, Container, Menu, Typography, IconButton, Toolbar, AppBar, Box} from '@mui/material'
+import { Select, MenuItem, Button, Container, Menu, Typography, IconButton, Toolbar, AppBar, Box } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from "../../Leomez_logo.png"
+import Contact from '../Contact/Contact';
 
 
 
@@ -14,7 +16,11 @@ import logo from "../../Leomez_logo.png"
 function Header() {
 
     const { t, i18n } = useTranslation()
-    const pages = [t('proyects_link'), t('about_me_link'), t('contact_link')];
+    const pages = [
+        { name: t('proyects_link'), link: "/proyects" },
+        { name: t('about_me_link'), link: "/aboutMe" },
+        { name: t('contact_link'), link: "#ancho-contact" }
+    ];
 
 
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -37,9 +43,11 @@ function Header() {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-                        <img className={s.logo} src={logo} alt="leomez" />
-                    </Box>
+                    <Link to="/">
+                        <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
+                            <img className={s.logo} src={logo} alt="leomez" />
+                        </Box>
+                    </Link>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -70,9 +78,11 @@ function Header() {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center" color={"#5ce1e6"}>{page}</Typography>
-                                </MenuItem>
+                                <Link to={page.link} key={page.name}>
+                                    <MenuItem onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center" color={"#5ce1e6"}>{page.name}</Typography>
+                                    </MenuItem>
+                                </Link>
                             ))}
                         </Menu>
                     </Box>
@@ -81,18 +91,29 @@ function Header() {
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection: 'row-reverse' }}>
                         {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: '#fff', display: 'block' }}
-                            >
-                                {page}
-                            </Button>
+                            page.name !== t('contact_link') ?
+                                <Link to={page.link} key={page.name}>
+                                    <Button
+                                        onClick={handleCloseNavMenu}
+                                        sx={{ my: 2, color: '#fff', display: 'block' }}
+                                    >
+                                        {page.name}
+                                    </Button>
+                                </Link> :
+                                    
+                                <a href={page.link}>
+                                    <Button
+                                        onClick={handleCloseNavMenu}
+                                        sx={{ my: 2, color: '#fff', display: 'block' }}
+                                    >
+                                        {page.name}
+                                    </Button>
+                                </a>
                         ))}
                     </Box>
                     <Box sx={{ minWidth: 120 }}>
                         <Select
-                            value={lenguage}                            
+                            value={lenguage}
                             onChange={handleChange}
                         >
                             <MenuItem value={'es'}>En</MenuItem>
