@@ -2,7 +2,7 @@
 import { React, useState } from 'react';
 import s from "./header.module.css";
 import "../Traductor/i18n";
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { useTranslation } from "react-i18next";
 import { Select, MenuItem, Button, Container, Menu, Typography, IconButton, Toolbar, AppBar, Box } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -16,10 +16,11 @@ import Contact from '../Contact/Contact';
 function Header() {
 
     const { t, i18n } = useTranslation()
+    const { pathname } = useLocation()
     const pages = [
         { name: t('proyects_link'), link: "/proyects" },
         { name: t('about_me_link'), link: "/aboutMe" },
-        { name: t('contact_link'), link: "#ancho-contact" }
+        { name: t('contact_link'), link: "#anchor-contact" }
     ];
 
 
@@ -78,21 +79,29 @@ function Header() {
                             }}
                         >
                             {pages.map((page) => (
+                                page.name !== t('contact_link') ?
                                 <Link to={page.link} key={page.name}>
                                     <MenuItem onClick={handleCloseNavMenu}>
                                         <Typography textAlign="center" color={"#5ce1e6"}>{page.name}</Typography>
                                     </MenuItem>
-                                </Link>
+                                </Link> :
+                                <a href={pathname !== '/' ? '/' : page.link}>
+                                    <MenuItem onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center" color={"#5ce1e6"}>{page.name}</Typography>
+                                    </MenuItem>
+                                </a>
                             ))}
                         </Menu>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-                        <img className={s.logo} src={logo} alt="leomez" />
+                        <Link to="/">
+                            <img className={s.logo} src={logo} alt="leomez" />
+                        </Link>
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection: 'row-reverse' }}>
                         {pages.map((page) => (
                             page.name !== t('contact_link') ?
-                                <Link to={page.link} key={page.name}>
+                                <Link to={page.link} key={page.name}>                                    
                                     <Button
                                         onClick={handleCloseNavMenu}
                                         sx={{ my: 2, color: '#fff', display: 'block' }}
@@ -100,8 +109,8 @@ function Header() {
                                         {page.name}
                                     </Button>
                                 </Link> :
-                                    
-                                <a href={page.link}>
+
+                                <a href={pathname !== '/' ? '/' : page.link}>                                    
                                     <Button
                                         onClick={handleCloseNavMenu}
                                         sx={{ my: 2, color: '#fff', display: 'block' }}

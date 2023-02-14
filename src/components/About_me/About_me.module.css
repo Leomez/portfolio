@@ -24,6 +24,10 @@
     align-items: center;
     margin-top: 3rem;
 }
+.skills_list{
+    max-height: 200px;
+}
+
 
 .skills_close .skills_list {
     height: 0;

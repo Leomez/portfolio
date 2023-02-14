@@ -1,4 +1,5 @@
 import * as React from 'react';
+import s from "./Tech_skill.module.css"
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -11,83 +12,76 @@ import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import HotelIcon from '@mui/icons-material/Hotel';
 import RepeatIcon from '@mui/icons-material/Repeat';
 import Typography from '@mui/material/Typography';
+import reactIcon from '../../Img/icons/react.png'
+import cssIcon from '../../Img/icons/css.png'
+import expressIcon from '../../Img/icons/express.png'
+import htmlIcon from '../../Img/icons/html.png'
+import jsIcon from '../../Img/icons/js.png'
+import nodejsIcon from '../../Img/icons/nodejs.png'
+import postgresIcon from '../../Img/icons/postgres.png'
+import reduxIcon from '../../Img/icons/redux.png'
+
 
 export default function TechSkills() {
   return (
     <Timeline position="alternate">
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          align="right"
-          variant="body2"
-          color="text.secondary"
-        >
-          9:30 am
-        </TimelineOppositeContent>
+      <TimelineItem>        
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot>
-            <FastfoodIcon />
+          <TimelineDot color='primary' variant='outlined'>
+            <img className={s.icons} src={jsIcon} alt="javascript" />
+          </TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <Typography variant="h6" component="span" sx={{ alignSelf: 'center' }}>
+            Javascript
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>        
+        <TimelineSeparator>
+          <TimelineConnector />
+          <TimelineDot color="primary" variant="outlined">
+            <img className={s.icons} src={reactIcon} alt="react" />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant="h6" component="span">
-            Eat
+            React
           </Typography>
-          <Typography>Because you need strength</Typography>
         </TimelineContent>
       </TimelineItem>
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          variant="body2"
-          color="text.secondary"
-        >
-          10:00 am
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot color="primary">
-            <LaptopMacIcon />
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span">
-            Code
-          </Typography>
-          <Typography>Because it&apos;s awesome!</Typography>
-        </TimelineContent>
-      </TimelineItem>
+
       <TimelineItem>
         <TimelineSeparator>
           <TimelineConnector />
           <TimelineDot color="primary" variant="outlined">
-            <HotelIcon />
+            <img className={s.icons} src={reduxIcon} alt="redux" />
           </TimelineDot>
           <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant="h6" component="span">
-            Sleep
+            Redux
           </Typography>
-          <Typography>Because you need rest</Typography>
         </TimelineContent>
       </TimelineItem>
+
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-          <TimelineDot color="secondary">
-            <RepeatIcon />
+          <TimelineConnector  />
+          <TimelineDot color="primary" variant="outlined">
+            <img className={s.icons} src={expressIcon} alt="express" />
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant="h6" component="span">
-            Repeat
-          </Typography>
-          <Typography>Because this is the life you love!</Typography>
+            Express
+          </Typography>          
         </TimelineContent>
       </TimelineItem>
     </Timeline>
