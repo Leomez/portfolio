@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import s from "./Tech_skills2.module.css"
-import reactIcon from '../../Img/icons/react.png'
+import reactIcon from '../../Img/icons/react.svg'
 import cssIcon from '../../Img/icons/css.png'
 import expressIcon from '../../Img/icons/express.png'
 import htmlIcon from '../../Img/icons/html.png'
@@ -8,7 +8,12 @@ import jsIcon from '../../Img/icons/js.png'
 import nodejsIcon from '../../Img/icons/nodejs.png'
 import postgresIcon from '../../Img/icons/postgres.png'
 import reduxIcon from '../../Img/icons/redux.png'
+import muiIcon from '../../Img/icons/MUI.png'
+import bootstrapIcon from '../../Img/icons/BootstrapIcon.svg'
+import sqlIcon from '../../Img/icons/sqlIcon.svg'
+import sequelizeIcon from '../../Img/icons/sequelizeIcon.png'
 import { useEffect } from "react";
+
 
 const iconsSkills = [
     { img: reactIcon, name: "react" },
@@ -18,7 +23,11 @@ const iconsSkills = [
     { img: jsIcon, name: "js" },
     { img: nodejsIcon, name: "node" },
     { img: postgresIcon, name: "postgres" },
-    { img: reduxIcon, name: "redux" }
+    { img: reduxIcon, name: "redux" },
+    { img: muiIcon, name: "materia ui" },
+    { img: bootstrapIcon, name: "bootstrap" },
+    { img: sqlIcon, name: "sql" },
+    { img: sequelizeIcon, name: "sequelize" }    
 ];
 const delay = 2500
 

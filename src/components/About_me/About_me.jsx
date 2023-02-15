@@ -21,12 +21,16 @@ export default function AboutMe() {
 
     const handleCollapseSkill = (e) => {
         // e.target.children
+        const skillList = document.getElementById('skillList')
         if (e.currentTarget.className.includes('close')) {
+
             e.currentTarget.classList.add(`${s.skills_open}`)
             e.currentTarget.classList.remove(`${s.skills_close}`)
+            skillList.classList.remove(`${s.skills_list_close}`)
         } else {
             e.currentTarget.classList.add(`${s.skills_close}`)
             e.currentTarget.classList.remove(`${s.skills_open}`)
+            skillList.classList.add(`${s.skills_list_close}`)
         }
         console.log(e.currentTarget);
     }
@@ -64,19 +68,14 @@ export default function AboutMe() {
                     <div >
                         <div onClick={handleCollapseSkill} className={`${s.skill_header} ${s.skills_close}`}>
                             <h2 className={s.skills_title}>
-                                Skills
+                               Tech Skills
                             </h2>
                             <ArrowRightIcon className={s.arrowIcon} />
                         </div>
-                        <div className={s.skills_list}>
+                        <div id="skillList" className={`${s.skills_list} ${s.skills_list_close}` }>
                             <TechSkills2 />
                         </div>
                     </div>
-
-                    <Box>
-
-                    </Box>
-
                 </Box>
             </Card>
         </Container>

@@ -9,7 +9,6 @@
     transition: 0.4s;
 }
 
-
 .skills_close .arrowIcon {
     color: black;
 }
@@ -22,15 +21,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin: 3rem 0;
 }
-/* .skills_list{
-    max-height: 200px;
-} */
+.skills_list{
+    /* max-height: 200px;    */
+    transition: all 0.4s;    
+}
 
+.skills_list_close{
+    height: 0;
+    overflow: hidden;    
+    transition: .1s;
+}
 
-.skills_close .skills_list {
+.skills_title:hover{
+    cursor: pointer;    
+}
+
+/* .skills_close .skills_list {
     height: 0;
     overflow: hidden;
-}
+} */
 

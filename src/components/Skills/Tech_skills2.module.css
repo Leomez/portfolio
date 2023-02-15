@@ -16,7 +16,7 @@
 
 .slideShow {
   margin: 0 auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   max-width: 12rem;
 }
 
@@ -38,4 +38,11 @@
 
 .slideshowDot.active {
   background-color: #6a0dad;
+}
+
+
+@media (max-width: 595px) {
+  .slideShow{
+    width: 10rem;
+  }
 }
