@@ -1,0 +1,20 @@
+.cardContainer {
+    padding-bottom: 1rem;
+}
+
+.card {
+    border-radius: 5px;
+    background-color: #6495ed9e;
+    padding: 2rem;
+}
+
+.cardTitle {
+    background: rgb(221, 232, 241);
+    background: linear-gradient(180deg, rgba(221, 232, 241, 0.10968137254901966) 0%, rgba(12, 4, 47, 1) 100%);
+}
+
+@media (min-width: 595px) {
+    .cardContainer {
+        padding: 2rem;
+    }
+}

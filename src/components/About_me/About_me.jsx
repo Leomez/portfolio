@@ -5,9 +5,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { useTranslation } from "react-i18next"
 import foto from "../../Img/foto.jpeg"
 import mediaQuery from "../../Utils/mediaQuery";
-import TechSkills from "../Skills/Tech_skills";
 import s from "./About_me.module.css"
-import { padding } from "@mui/system";
 import TechSkills2 from "../Skills/Tech_skills2";
 
 
