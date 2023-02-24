@@ -36,7 +36,9 @@ const resources = {
             validar_telefono2: "El teléfono debe tener entre 7 y 14 dígitos numéricos",
             validar_email1: "El correo electrónico es requerido",
             validar_email2: "El correo electrónico no es válido",
-            valiadr_mensaje: "El mensaje es requerido"
+            valiadr_mensaje: "El mensaje es requerido",
+            no_encontrado: "Página no encontrada...",
+            no_encontrado_message: "Lo sentimos, la página que está buscando no se pudo encontrar"
 
         }
     },
@@ -74,7 +76,9 @@ const resources = {
             validar_telefono2: "The phone must have between 7 and 14 numerical digits",
             validar_email1: "Email is required",
             validar_email2: "Email is invalid",
-            valiadr_mensaje: "The message is required"
+            valiadr_mensaje: "The message is required",
+            no_encontrado: "Page not found...",
+            no_encontrado_message: "Sorry, the page you are looking for could not be found."
         }
     }
 }
