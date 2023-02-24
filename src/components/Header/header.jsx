@@ -85,7 +85,7 @@ function Header() {
                                         <Typography textAlign="center" color={"#5ce1e6"}>{page.name}</Typography>
                                     </MenuItem>
                                 </Link> :
-                                <a href={pathname !== '/' ? '/' : page.link}>
+                                <a key={page.name} href={pathname !== '/' ? '/' : page.link}>
                                     <MenuItem onClick={handleCloseNavMenu}>
                                         <Typography textAlign="center" color={"#5ce1e6"}>{page.name}</Typography>
                                     </MenuItem>
@@ -110,7 +110,7 @@ function Header() {
                                     </Button>
                                 </Link> :
 
-                                <a href={pathname !== '/' ? '/' : page.link}>                                    
+                                <a key={page.name} href={pathname !== '/' ? '/' : page.link}>                                    
                                     <Button
                                         onClick={handleCloseNavMenu}
                                         sx={{ my: 2, color: '#fff', display: 'block' }}

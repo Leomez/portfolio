@@ -1,8 +1,9 @@
 import { Container, Paper, Typography } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import s from "./proyect.module.css"
-import M from "materialize-css";
-import imagen from "../../Img/imagen-de-prueba-320x240-1.jpg"
+import { useTranslation } from "react-i18next";
+// import M from "materialize-css";
+// import imagen from "../../Img/imagen-de-prueba-320x240-1.jpg"
 import { Box } from "@mui/system";
 import mediaQuery from "../../Utils/mediaQuery";
 import proyectos from "../../Utils/proyectos";
@@ -11,7 +12,7 @@ import LinkIcon from '@mui/icons-material/Link';
 
 
 export default function Proyect() {
-
+    const { t } = useTranslation()
     proyectos().map(p => console.log(p.nombre))
     // console.log(proyectos());
 
@@ -19,7 +20,7 @@ export default function Proyect() {
     return (
         <Container>
             <Typography variant="h1" sx={{ fontSize: '4rem', padding: '10rem 0 5rem 0' }}>
-                Mis Proyectos
+                {t("proyects_link")}
             </Typography>
             <Box sx={{ display: mediaQuery('block', 'flex') }}>
                 {proyectos().map(p => (
@@ -30,14 +31,13 @@ export default function Proyect() {
                                     <div className="card-image">
                                         <img src={p.img} />
                                         <span className={`${s.cardTitle} card-title`}>{p.nombre}</span>
-
                                     </div>
                                     <div className="card-content">
                                         <p>{p.detalle}</p>
                                     </div>
                                     <div className="card-action">
-                                        <a href={p.GitHub_link}>GitHubIcon</a> {/* los iconos estan inchando las pelotas*/}
-                                        <a href={p.deploy_link}>LinkIcon</a>
+                                        <a href={p.GitHub_link}><GitHubIcon /></a> {/* los iconos estan inchando las pelotas*/}
+                                        <a href={p.deploy_link}><LinkIcon /></a>
                                     </div>
                                 </div>
                             </div>

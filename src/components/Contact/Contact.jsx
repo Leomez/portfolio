@@ -49,7 +49,7 @@ export default function Contact() {
                             />
                         </Link>
                     </ListItem>
-                    <Divider variant="fullWidth" orientation={mediaQuery('horizontal', 'vertical')} component="li" />
+                    <Divider variant="fullWidth"  component="li" />
                     <ListItem alignItems="center">
                         <Link to='https://github.com/Leomez' className={s.link}>
                             <ListItemAvatar>
@@ -73,7 +73,7 @@ export default function Contact() {
                             />
                         </Link>
                     </ListItem>
-                    <Divider variant="fullWidth" orientation={{ md: 'vertical' }} component="li" />
+                    <Divider variant="fullWidth"  component="li" />
                     <ListItem alignItems="center">                        
                             <ListItemAvatar>
                                 <Avatar alt="gmail" src={gmail_logo} />

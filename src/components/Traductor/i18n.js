@@ -25,7 +25,19 @@ const resources = {
             footer: "¡¡Gracias por pasar!!", 
             henryGadget_proyecto_descripcion: 'Proyecto realizado en grupo como trabajo final para aprobar la carrera de Full Stack Developer del bootcamp de Henry. El proyecto fué realizado con metodología scrum, para lo cual utilizamos Trello como herrmienta de organización. El Front fue desarrllado en React con Javascript y Redux para el manejo de estados globales. El Back esta hecho en Node.js con Express para server y Postgres y Sequelize para la DB. Además se utilizó Stripe y Paypal para implementar la pasarela de pagos y Firebase para autenticación de usuarios',
             henryPokemon_proyecto_descripcion: 'Este proyecto presenté para aprobar el PI(proyecto individual) del Bootcamp de Henry. El sitio cuenta con una landing-page como portada y al ingresar tiene una lista de 40 pokemons paginados en 4 paginas con un maximo de 6 cards por pagina cuya info se consume desde una api externa. También cuenta con una sección para crear nuevos pokemons que son almacenados en una DB. En el proyecto utilicé javascript, React, Redux y los estilos en CSS puro para el Front. en el Backend utilice Node.js con Express, Postgres y Sequelize',
-            proximamente: 'PROXIMAMENTE...'        
+            proximamente: 'PROXIMAMENTE...',
+            nombre: "Nombre:",
+            telefono: "Telefono:",
+            email: "Dirección de correo electrónico:",
+            mensaje: "Mensaje:",
+            enviar: "Enviar",
+            validar_nombre: "El nombre es requerido", 
+            validar_telefono1: "El teléfono es requerido",
+            validar_telefono2: "El teléfono debe tener entre 7 y 14 dígitos numéricos",
+            validar_email1: "El correo electrónico es requerido",
+            validar_email2: "El correo electrónico no es válido",
+            valiadr_mensaje: "El mensaje es requerido"
+
         }
     },
     en:{
@@ -51,7 +63,18 @@ const resources = {
             footer: "Thanks for the visit!",
             henryGadget_proyecto_descripcion: "Group project as final work to pass the Full Stack Developer career of Henry's bootcamp. The project was carried out with scrum methodology, for which we used Trello as an organization tool. The Front was developed in React with Javascript and Redux for handling global states. The Back is done in Node.js with Express for the server and Postgres and Sequelize for the DB. In addition, Stripe and Paypal were brought in to implement the payment gateway and Firebase for user authentication.",
             henryPokemon_proyecto_descripcion: "I presented this project to approve the PI (individual project) of Henry's Bootcamp. The site has a landing-page as the cover and upon entering it has a list of 40 pokemons paginated in 4 pages with a maximum of 6 cards per page whose info is consumed from an external api. It also has a section to create new pokemons that are stored in a DB. In the project I used javascript, React, Redux and the styles in pure CSS for the Front. in the Backend use Node.js with Express, Postgres and Sequelize",
-            proximamente: "SOON..."
+            proximamente: "SOON...",
+            nombre: "Name:",
+            telefono: "Phone:",
+            email: "Email address:",
+            mensaje: "Message:",
+            enviar: "Send",
+            validar_nombre: "The name is required", 
+            validar_telefono1: "Phone is required",
+            validar_telefono2: "The phone must have between 7 and 14 numerical digits",
+            validar_email1: "Email is required",
+            validar_email2: "Email is invalid",
+            valiadr_mensaje: "The message is required"
         }
     }
 }

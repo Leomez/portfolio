@@ -9,6 +9,7 @@
 }
 
 .cardTitle {
+    width: 100%;
     background: rgb(221, 232, 241);
     background: linear-gradient(180deg, rgba(221, 232, 241, 0.10968137254901966) 0%, rgba(12, 4, 47, 1) 100%);
 }

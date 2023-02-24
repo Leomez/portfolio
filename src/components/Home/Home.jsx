@@ -7,6 +7,7 @@ import logo from "../../Img/logo_LM.png";
 import Contact from "../Contact/Contact";
 import { Link } from "react-router-dom";
 import mediaQuery from "../../Utils/mediaQuery";
+import ContactForm from "../contactForm/ContactForm";
 // import ContactLargeScreen from "../Contact/Contact_large_screen";
 
 
@@ -35,11 +36,12 @@ export default function Home() {
                     {t('presentacionP1')}
                 </Typography>
                 <Typography variant="h5" sx={{fontSize: '1.5rem', fontWeight: '200', color:'beige'}}>
-                {t('presentacionP2_1')} <span className={s.link}>{t('presentacionP2_2')}</span> {t('presentacionP2_3')} <Link to={"/aboutMe"}><span className={s.link}>{t('presentacionP2_4')}</span></Link>
+                {t('presentacionP2_1')} <Link to={"/proyects"}><span className={s.link}>{t('presentacionP2_2')}</span></Link> {t('presentacionP2_3')} <Link to={"/aboutMe"}><span className={s.link}>{t('presentacionP2_4')}</span></Link>
                 </Typography>
             </Box>
             <Box id="anchor-contact" sx={{width: '100%', marginTop: mediaQuery('3rem', '4rem')}}>                
                 <Contact />
+                <ContactForm />
             </Box>
             {/* <Box sx={{width: '100%', border: '1px solid red', display: mediaQuery('none', 'flex')}}>
                 <ContactLargeScreen/>

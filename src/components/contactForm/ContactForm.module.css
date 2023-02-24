@@ -1,0 +1,33 @@
+.input {
+    background-color: #05263b;
+    color: #fff;
+    z-index: 0;
+}
+
+label {
+    color: #7fbedd;
+    cursor: pointer;
+    font-size: large;
+}
+
+.form {
+    background-color: #05263b;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+input:hover {
+    color: #fff;
+    /* cursor: pointer; */
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.errorMessage {
+    display: block;
+    color: red;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
