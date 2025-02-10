@@ -1,6 +1,7 @@
 import { GitHub } from "@mui/icons-material";
 import img_henryPokemon from "../Img/pokemon_gif.gif";
 import img_henry_gadget from "../Img/HenryGadget.gif"
+import img_portalRRHH from "../Img/App-de-RRHH.gif"
 import { useTranslation } from "react-i18next"
 
 
@@ -22,6 +23,13 @@ export default function Proyectos() {
             deploy_link: t('proximamente'),
             GitHub_link: 'https://github.com/Leomez/PI-Pokemon-Main',
             img: img_henryPokemon
+        },
+        {
+            nombre: 'Portal RRHH',
+            detalle: t('portalRRHH_proyecto_descripcion'),
+            deploy_link: t('proximamente'),
+            GitHub_link: 'https://github.com/Leomez/RR-HH-Frontend',
+            img: img_portalRRHH
         }
     ]
 

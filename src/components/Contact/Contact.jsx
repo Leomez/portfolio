@@ -23,7 +23,7 @@ export default function Contact() {
             <Container>
                 <List sx={{
                     width: '100%',
-                    bgcolor: 'background.paper',
+                    bgcolor: '#6495ed9e',
                     display: mediaQuery('block', 'flex')
                 }}>
                     <ListItem alignItems="center">
