@@ -1,4 +1,3 @@
-import { GitHub } from "@mui/icons-material";
 import img_henryPokemon from "../Img/pokemon_gif.gif";
 import img_henry_gadget from "../Img/HenryGadget.gif"
 import img_portalRRHH from "../Img/App-de-RRHH.gif"
@@ -27,8 +26,9 @@ export default function Proyectos() {
         {
             nombre: 'Portal RRHH',
             detalle: t('portalRRHH_proyecto_descripcion'),
-            deploy_link: t('proximamente'),
+            deploy_link: t('https://portalcoqhr.onrender.com'),
             GitHub_link: 'https://github.com/Leomez/RR-HH-Frontend',
+            GitHub_link_backend: 'https://github.com/Leomez/RR-HH-Backend',
             img: img_portalRRHH
         }
     ]

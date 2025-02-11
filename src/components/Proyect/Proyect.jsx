@@ -36,6 +36,7 @@ export default function Proyect() {
                                         <p>{p.detalle}</p>
                                     </div>
                                     <div className="card-action">
+                                        {p.GitHub_link_backend && <a href={p.GitHub_link_backend}><GitHubIcon/></a>} 
                                         <a href={p.GitHub_link}><GitHubIcon /></a>
                                         <a href={p.deploy_link}><LinkIcon /></a>
                                     </div>
